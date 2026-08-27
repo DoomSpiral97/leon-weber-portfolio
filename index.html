@@ -2,20 +2,28 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Portfolio of Leon Weber, a software development trainee in Karlsruhe seeking an internship."><title>Leon Weber — Software Development Trainee</title><link rel="stylesheet" href="style.css"></head>
 <body><canvas id="webgl" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
 
-<header class="nav"><a class="logo" href="#home" aria-label="Leon Weber home">LW<span>·</span>DEV</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Capabilities</a><a href="#projects">Projects</a><a class="nav-cta" href="#contact">Let's talk <span>↗</span></a></nav></header>
+<header class="nav"><a class="logo" href="#home" aria-label="Leon Weber home">LW<span>·</span>DEV</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Capabilities</a><a href="#projects">Projects</a><a class="nav-cta" href="#contact">Let’s talk <span>↗</span></a></nav></header>
 
 <main>
 
-<!-- HERO -->
+<!-- HERO: TERMINAL -->
 <section class="section hero" id="home">
-  <div class="hero-copy">
-    <p class="kicker">KARLSRUHE, GERMANY <i></i> AVAILABLE FOR INTERNSHIP <i></i> PROGRAMME ENDS Q2 2027</p>
-    <h1>Building useful<br><em>digital things.</em></h1>
-    <p class="intro">I'm Leon, a software development trainee focused on turning thoughtful ideas into reliable web applications.</p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="#projects">Explore my work <span>↓</span></a>
-      <a class="text-link" href="#contact">Let's talk internship <span>↗</span></a>
+  <div class="terminal-wrap">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="tb-dot" style="background:#ff5f57"></span>
+        <span class="tb-dot" style="background:#ffbd2e"></span>
+        <span class="tb-dot" style="background:#28c840"></span>
+        <span class="tb-title">leon@portfolio:~</span>
+      </div>
+      <div class="terminal-body" id="termBody"></div>
+      <div class="terminal-input-row">
+        <span class="prompt">leon@portfolio:~$&nbsp;</span>
+        <input id="termInput" class="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+        <span class="term-cursor" aria-hidden="true"></span>
+      </div>
     </div>
+    <p class="term-hint">Try: <code>whoami</code> &nbsp;·&nbsp; <code>cat profile.json</code> &nbsp;·&nbsp; <code>cat projects.json</code> &nbsp;·&nbsp; <code>help</code></p>
   </div>
   <div class="scroll-label"><span>SCROLL TO DISCOVER</span><b></b></div>
 </section>
@@ -28,7 +36,7 @@
   </div>
   <div class="body-copy">
     <p>I am currently retraining as a <strong>Software Developer (Fachinformatiker für Anwendungsentwicklung)</strong> and looking for an internship opportunity in Karlsruhe or the wider Baden region. My programme finishes in Q2 2027, after which I am available full-time.</p>
-    <p>I learn best by building: from responsive interfaces and REST APIs to Docker-based services. I'm keen to contribute within a real development team, develop good engineering habits, and keep improving every day.</p>
+    <p>I learn best by building: from responsive interfaces and REST APIs to Docker-based services. I’m keen to contribute within a real development team, develop good engineering habits, and keep improving every day.</p>
     <a class="text-link" href="#contact">Start a conversation <span>↗</span></a>
   </div>
 </section>
@@ -42,34 +50,19 @@
       <span>01</span>
       <h3>Frontend</h3>
       <p>Built responsive UIs and interactive 3D scenes with vanilla JS and Three.js, from form validation to WebGL animations.</p>
-      <ul>
-        <li>HTML &amp; CSS</li>
-        <li>JavaScript</li>
-        <li>Three.js &amp; WebGL</li>
-        <li>Responsive UI</li>
-      </ul>
+      <ul><li>HTML &amp; CSS</li><li>JavaScript</li><li>Three.js &amp; WebGL</li><li>Responsive UI</li></ul>
     </article>
     <article>
       <span>02</span>
       <h3>Backend</h3>
       <p>Developed REST APIs with Express and JWT auth, backed by relational databases with structured query logic.</p>
-      <ul>
-        <li>Node.js &amp; Express</li>
-        <li>SQL databases</li>
-        <li>REST APIs &amp; auth</li>
-        <li>Python scripting</li>
-      </ul>
+      <ul><li>Node.js &amp; Express</li><li>SQL databases</li><li>REST APIs &amp; auth</li><li>Python scripting</li></ul>
     </article>
     <article>
       <span>03</span>
       <h3>Workflow</h3>
       <p>Comfortable with feature branching, Docker Compose services and deploying behind a self-hosted reverse proxy.</p>
-      <ul>
-        <li>Git &amp; GitHub</li>
-        <li>Docker &amp; Compose</li>
-        <li>Linux &amp; deployment</li>
-        <li>CI / GitHub Actions</li>
-      </ul>
+      <ul><li>Git &amp; GitHub</li><li>Docker &amp; Compose</li><li>Linux &amp; deployment</li><li>CI / GitHub Actions</li></ul>
     </article>
   </div>
 </section>
@@ -77,39 +70,18 @@
 <!-- PROJECTS -->
 <section class="section work" id="projects">
   <div class="work-heading">
-    <div>
-      <p class="kicker">03 / SELECTED WORK</p>
-      <h2>Made to learn.<br>Built to work.</h2>
-    </div>
+    <div><p class="kicker">03 / SELECTED WORK</p><h2>Made to learn.<br>Built to work.</h2></div>
     <p>Personal projects are where I test ideas, solve real problems and turn new concepts into hands-on experience.</p>
   </div>
   <div class="project-list">
     <a class="project" href="https://github.com/DoomSpiral97" target="_blank" rel="noopener">
-      <span class="number">01</span>
-      <div>
-        <p class="project-type">FULL-STACK WEB APP</p>
-        <h3>TaskFlow</h3>
-        <p>A task management application with secure login, role-based access, database persistence and a RESTful API.</p>
-      </div>
-      <span class="arrow">↗</span>
+      <span class="number">01</span><div><p class="project-type">FULL-STACK WEB APP</p><h3>TaskFlow</h3><p>A task management application with secure login, role-based access, database persistence and a RESTful API.</p></div><span class="arrow">↗</span>
     </a>
     <a class="project" href="https://github.com/DoomSpiral97" target="_blank" rel="noopener">
-      <span class="number">02</span>
-      <div>
-        <p class="project-type">DATA VISUALISATION</p>
-        <h3>Server Monitor</h3>
-        <p>An interactive dashboard that presents system metrics clearly and makes trends easier to understand.</p>
-      </div>
-      <span class="arrow">↗</span>
+      <span class="number">02</span><div><p class="project-type">DATA VISUALISATION</p><h3>Server Monitor</h3><p>An interactive dashboard that presents system metrics clearly and makes trends easier to understand.</p></div><span class="arrow">↗</span>
     </a>
     <a class="project" href="https://github.com/DoomSpiral97" target="_blank" rel="noopener">
-      <span class="number">03</span>
-      <div>
-        <p class="project-type">SELF-HOSTED INFRASTRUCTURE</p>
-        <h3>MediaHub</h3>
-        <p>A Docker-based homelab environment with reverse proxy, storage and self-hosted services.</p>
-      </div>
-      <span class="arrow">↗</span>
+      <span class="number">03</span><div><p class="project-type">SELF-HOSTED INFRASTRUCTURE</p><h3>MediaHub</h3><p>A Docker-based homelab environment with reverse proxy, storage and self-hosted services.</p></div><span class="arrow">↗</span>
     </a>
   </div>
 </section>
@@ -125,13 +97,10 @@
     <a class="contact-pill" href="/cv.pdf" target="_blank">Download CV ↗</a>
     <a class="contact-pill" href="https://github.com/DoomSpiral97" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
-  <footer>
-    <span>© 2026 LEON WEBER</span>
-    <span>KARLSRUHE · GERMANY</span>
-    <a href="#home">BACK TO TOP ↑</a>
-  </footer>
+  <footer><span>© 2026 LEON WEBER</span><span>KARLSRUHE · GERMANY</span><a href="#home">BACK TO TOP ↑</a></footer>
 </section>
 
 </main>
 <script type="module" src="main.js"></script>
+<script src="terminal.js"></script>
 </body></html>
